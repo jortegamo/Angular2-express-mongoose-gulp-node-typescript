@@ -30,6 +30,9 @@ build/Release
 .tsdrc
 .typingsrc
 
+#MAC files on save
+*.DS_Store
+
 #IDE configuration files
 .idea
 .vscode
