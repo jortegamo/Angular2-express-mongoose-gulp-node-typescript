@@ -5,14 +5,14 @@
 import express = require("express");
 import HeroController = require("./../../controllers/HeroController");
 
-var router = express.Router();
 class HeroRoutes {
     private _heroController: HeroController;
 
     constructor () {
         this._heroController = new HeroController();
     }
-    get routes () {
+
+    setRoutes (router: any) {
         var controller = this._heroController;
 
         router.get("/heroes", controller.retrieve);
@@ -23,8 +23,7 @@ class HeroRoutes {
 
         return router;
     }
-
-
+    
 }
 
 Object.seal(HeroRoutes);
